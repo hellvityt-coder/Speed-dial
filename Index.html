@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speed Dial</title>
+  <style>
+    /* Можно вставить ранее предложенный CSS */
+    :root {
+      --bg-color: #f0f0f0;
+      --bg-image: none;
+    }
+    body {
+      margin: 0; font-family: Arial, sans-serif;
+      background: var(--bg-color) var(--bg-image) center/cover no-repeat;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    header {
+      background: rgba(255,255,255,0.85);
+      padding: 10px 20px;
+      display: flex; align-items: center; gap: 10px;
+      flex-wrap: wrap;
+    }
+    header button, header input[type=color] {
+      font-size: 14px;
+      cursor: pointer;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+    }
+    #tiles {
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .tile {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      padding: 15px;
+      transition: box-shadow 0.3s ease;
+      position: relative;
+      user-select: none;
+    }
+    .tile:hover {
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+    }
+    .tile img.icon {
+      width: 48px; height: 48px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      background: #f0f0f0;
+    }
+    .tile .title {
+      font-size: 14px;
+      text-align: center;
+      word-break: break-word;
+    }
+    .tile .btns {
+      position: absolute;
+      top: 6px; right: 6px;
+      display: flex;
+      gap: 6px;
+    }
+    .tile .btns button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #888;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      padding: 0;
+      line-height: 1;
+      user-select: none;
+    }
+    .tile .btns button:hover {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button id="addSiteBtn">Добавить сайт</button>
+  <label title="Выбрать цвет фона">
+    Фон цвета <input type="color" id="bgColorPicker" />
+  </label>
+  <label title="Загрузить изображение фона">
+    Фон картинка <input type="file" id="bgImagePicker" accept="image/*" />
+  </label>
+  <button id="resetBgBtn">Сбросить фон</button>
+</header>
+
+<div id="tiles"></div>
+
+<script>
+  // Здесь вставьте ранее предоставленный JavaScript (или используйте сокращённый вариант)
+  // Для краткости примера — используйте код из предыдущих сообщений.
+</script>
+
+</body>
+</html>
